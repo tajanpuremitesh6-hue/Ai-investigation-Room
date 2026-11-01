@@ -3,6 +3,7 @@
   "framework": "express",
   "buildCommand": "npm run build",
   "rewrites": [
+    { "source": "/", "destination": "/index.html" },
     { "source": "/login", "destination": "/index.html" },
     { "source": "/register", "destination": "/index.html" },
     { "source": "/create", "destination": "/index.html" },
