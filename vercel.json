@@ -1,0 +1,19 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "buildCommand": "npm run build",
+  "functions": {
+    "index.js": {
+      "maxDuration": 300
+    }
+  },
+  "rewrites": [
+    { "source": "/login", "destination": "/index.html" },
+    { "source": "/register", "destination": "/index.html" },
+    { "source": "/create", "destination": "/index.html" },
+    { "source": "/dashboard", "destination": "/index.html" },
+    { "source": "/history", "destination": "/index.html" },
+    { "source": "/generating/:id", "destination": "/index.html" },
+    { "source": "/case/:id", "destination": "/index.html" },
+    { "source": "/case/:id/:section", "destination": "/index.html" }
+  ]
+}
