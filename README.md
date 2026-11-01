@@ -42,6 +42,8 @@ The API returns HTTP 202 for case creation and the client polls generation statu
 
 The repository is configured as a single Vercel Express app with the React client built into Vercel's `public` directory. Add these environment variables in the Vercel project settings before deploying:
 
+Set the Vercel project **Root Directory** to the repository root (`.`). The deployment config builds the React client into `public` and packages the Express API from the root entry point.
+
 - `MONGODB_URI`
 - `JWT_SECRET` (at least 32 characters)
 - `GEMINI_API_KEY`
