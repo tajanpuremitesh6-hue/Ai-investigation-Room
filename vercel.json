@@ -1,12 +1,8 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
+  "framework": "express",
   "buildCommand": "npm run build",
   "outputDirectory": "public",
-  "functions": {
-    "index.js": {
-      "maxDuration": 300
-    }
-  },
   "rewrites": [
     { "source": "/login", "destination": "/index.html" },
     { "source": "/register", "destination": "/index.html" },

@@ -50,6 +50,6 @@ Set the Vercel project **Root Directory** to the repository root (`.`). The depl
 - `GEMINI_TEXT_MODEL` (optional; defaults to `gemini-3.8-flash`)
 - `ENABLE_IMAGE_GENERATION=false` (recommended because Vercel function storage is temporary)
 
-Keep credentials in Vercel's environment settings and out of Git. The app queues generation with Vercel's function lifecycle helper and the API function is configured for a maximum duration of 300 seconds. Long-running or interrupted generation still depends on that function completing within the account's duration limit.
+Keep credentials in Vercel's environment settings and out of Git. The app queues generation with Vercel's function lifecycle helper. Long-running or interrupted generation still depends on the function completing within the duration limit for your Vercel plan.
 
 See [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) and [`docs/API.md`](./docs/API.md) for the data model, generation flow, and API contracts.
