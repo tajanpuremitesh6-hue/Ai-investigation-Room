@@ -13,6 +13,7 @@ import { asyncHandler } from './utils/asyncHandler.js';
 const app = express();
 app.use(cors({ origin: env.clientUrl }));
 app.use(express.json({ limit: '32kb' }));
+app.get('/', (_request, response) => response.redirect(302, '/index.html'));
 app.use(asyncHandler(async (_request, _response, next) => {
   await connectDatabase(env.mongoUri);
   next();
